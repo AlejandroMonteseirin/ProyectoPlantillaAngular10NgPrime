@@ -1,0 +1,59 @@
+<div class="login-body" id="todo">
+    <!--<p-dialog header="{{titleDialog}}" [(visible)]="showDialog" [modal]="true" [responsive]="true" width="350"
+        minWidth="200">
+        <span>{{contentDialog}}</span>
+        <p-footer>
+            <button type="button" pButton icon="fa-close" class="buttonWhite" (click)="hideDialog()"
+                label="{{'General.cerrar' | translate}}"></button>
+        </p-footer>
+    </p-dialog>-->
+
+
+
+    <div class="login-panel">
+        <div class="login-panel-header">
+        </div>
+        <div class="login-panel-content">
+            <div class="p-grid">
+                <div class="p-col-6 p-offset-3">
+                    <h1 class="login-title">{{ "Login.titulo" | translate }}</h1>
+                </div>
+
+                <div name="loginContainer">
+                    <div m-b-5>
+                        <div class="p-input-icon-left  " style="width: 100%;">
+                            <i class="pi pi-user-edit"></i>
+                            <input style="width: 100%;" pInputText (keyup.enter)="hacerLogin(credencial1, credencial2)"
+                                id="input-credencial1" [(ngModel)]="credencial1" (change)="checkearValores()"
+                                [class.p-invalid]="credencial1ValError" type="text" size="30"
+                                placeholder="{{ 'Login.credencial1' | translate }}">
+                        </div>
+                        <small [ngClass]="{'invisible':!credencial1ValError}" id="username2-help"
+                            class="p-invalid">{{ "Login.credencial1.error" | translate }}</small>
+
+                    </div>
+                    
+                    <div >                        <div class="p-input-icon-left" style="width: 100%;">
+                            <i *ngIf="!credencial2ValError" class="pi pi-unlock"></i>
+                            <i *ngIf="credencial2ValError" class="pi pi-lock"></i>
+                            <input style="width: 100%;" (keyup.enter)="hacerLogin(credencial1, credencial2)" [(ngModel)]="credencial2"
+                                (change)="checkearValores()" [class.p-invalid]="credencial2ValError" type="password"
+                                size="30" pInputText placeholder="{{ 'Login.credencial2' | translate }}">
+                        </div>
+                        <small [ngClass]="{'invisible':!credencial2ValError}" id="username2-help"
+                            class="p-invalid">{{ "Login.credencial2.error" | translate }}</small>
+
+                    </div>
+                    <br>
+                    <div  style="width: 100%;">
+                        <button  style="width: 100%;" type="button" (click)="hacerLogin(credencial1, credencial2)"
+                            class="ui-button ui-widget ui-corner-all">
+                            <span class="ui-button-text">{{ "Login.acceder" | translate }}</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

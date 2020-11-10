@@ -1,0 +1,90 @@
+.body {
+    height: 100%;
+}
+
+body {
+    min-width: 320px !important;
+    height: auto !important;
+    min-height: auto !important;
+    background-color: #FFFFFF !important;
+}
+
+body .ui-widget-header {
+    background-color: #5CBB61;
+    color: #ffffff;
+    border: 1px solid #5CBB61;
+}
+
+.layout-wrapper .layout-main {
+    margin: 0px !important;
+}
+
+.layout-wrapper .layout-main .layout-content {
+    padding: 0px !important;
+}
+
+body .ui-button,
+body .ui-datepicker-buttonpane>button {
+    background-color: #5CBB61 !important;
+}
+
+.input-requerido {
+    border-width: 0 0 2px 0;
+    border-color: red !important;
+    padding-bottom: 0px;
+}
+
+.calendar-requerido > span > input {
+    border-width: 0 0 2px 0;
+    border-color: red !important;
+    padding-bottom: 0px;
+}
+
+/*** QUITAR FLECHAS DE INPUT TYPE NUMBER ***/
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/*** ***/
+
+
+/* LOGIN */
+
+.login-body .login-panel .login-panel-header {
+    background-color: #5CBB61 !important;
+}
+
+
+/* FIN LOGIN */
+
+
+/* GRID */
+
+.ui-table-thead th {
+    /*background-color: #5CBB61 !important;*/
+    color: #5CBB61;
+}
+
+
+/*Override de esta propieda para que todas las filas impares de los grid también tengan fondo blanco*/
+
+body .ui-table .ui-table-tbody>tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+
+/* FIN GRID */

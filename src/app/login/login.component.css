@@ -1,0 +1,25 @@
+.login-body {
+    padding-top: 100px;
+    background-image: none;
+}
+
+.login-title {
+    color: #333333;
+}
+
+.login-panel {
+    max-width: 600px;
+    min-width: 260px;
+    width: 50%;
+    height: 320px;
+    position: inherit;
+    margin: 0 auto;
+}
+
+.buttonWhite {
+    color: white !important;
+}
+.invisible{
+    visibility: hidden;
+}
+
