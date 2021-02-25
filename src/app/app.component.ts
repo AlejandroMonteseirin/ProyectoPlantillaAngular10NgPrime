@@ -1,6 +1,8 @@
 import { Component,OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import {TranslateService} from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
+
 
 
 const defaultLanguage = "en";
@@ -16,7 +18,7 @@ const languages: string[] = [defaultLanguage].concat(additionalLanguages);
 
 
 export class AppComponent implements OnInit{
-  title = 'Angular-NC-Visor-Facturas';
+  title = 'Angular-Landing-page-refrival';
   
   constructor(private primengConfig: PrimeNGConfig,        private translate: TranslateService,
     ) {
@@ -47,5 +49,10 @@ export class AppComponent implements OnInit{
       //hardcodeado a español
       let initLang="es"
       this.translate.use(initLang);
+
+      if (environment.production) {
+        console.log = (...args)=>{}
+      }
+
   }
 }
